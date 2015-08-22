@@ -113,7 +113,7 @@ var empaticaConnect = {
         var userId = body.match(userIdRegex)[1];
 
         // Next we can get the list of sessions for the last 24 hours.
-        var startTime = moment().subtract(24, 'hours').format('X');
+        var startTime = moment().subtract(25, 'minutes').format('X');
         var endTime = moment().format('X');
         var requestUrl = 'https://www.empatica.com/connect/connect.php/users/'+userId+'/sessions?from='+startTime+'&to='+endTime;
         request.get(requestUrl, function (error, response, body) {
